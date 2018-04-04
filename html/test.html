@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>南方微学网络(面试答卷)</title>
+<script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+<script src="js/question.js"></script>
+<!-- for-mobile-apps -->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="applicable-device"content="pc,mobile"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+
+<style>
+	body{
+		width: 70%;
+		margin: auto;
+    	padding-bottom: 50px;
+	}
+	.formT{
+		/*width: 20%;
+		background-color: pink;*/
+	}
+	/*@media screen and(min-width: 500px){
+		.formT{
+	    	width: 100%;
+	    	background: yellow;
+	    	margin: auto;
+    		padding-bottom: 50px;
+	    }
+	}
+	@media screen and(max-width: 1205px){
+		.formT{
+	    	width: 60%;
+	    	background: pink;
+	    	margin: auto;
+    		padding-bottom: 50px;
+	    } 
+	}*/
+
+	
+    html{
+    	text-align: center;
+    	width: 100%;
+    	background-color: white;
+    }
+	
+    .contentT{
+    	padding: 0px 50px 50px 50px;
+    	/*background-color: red;*/
+    }
+    h3{
+    	text-align: left;
+    	float: left;
+    	display: block;
+    	width: 50%;
+    }
+    p{
+    	color: #444444;
+    	font-weight: bold;
+    }
+    h4{
+    	text-align: right;
+    	float: left;
+    	width: 50%;
+    }
+    .questionText{
+    	padding: 30px 10px;
+    	text-align: left;
+    }
+    .textareaT{
+    	height: 80px;
+    	margin-left: 10px;
+    	margin-right: 10px;
+    	width: 90%;
+    }
+    .submitT{
+    	width: 150px;
+    	height: 50px;
+    	background-color: #7ac29a;
+    	border-radius: 10px;
+    }
+
+    @media screen and(max-width: 800px){
+		.formT{
+			width: 60%;
+			background-color: red;
+		}
+	}
+	@media screen and(max-width: 400px){
+		.formT{
+			width: 20%;
+			background-color: pink;
+		}
+	}
+	
+
+	/*.go {
+		width: 47px;
+		height:60px;
+		position: fixed;
+		_position: absolute;
+		top:40%;
+		_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||200)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+		left: 50%;margin-left:455px; 
+		bottom: 25%;
+	}
+	.go a {
+		background: url(/images/go.gif) no-repeat;
+		display: block;
+		text-indent: 999em;
+		width:47px;
+		border: 0;
+		overflow: hidden;
+		outline:0;
+		float: left;
+	}
+	.go .top {
+		background-position: 0 0px;
+		height:46px;
+	}
+	.go .bottom {
+		background-position: 0 -47px;
+		height: 46px;
+	}
+	.go .top:hover{background-position:-48px -0px}
+	.go .bottom:hover{background-position:-48px -47px}*/
+</style>
+<!--<script type="text/javascript">
+    function clicked(){
+    	var a1;
+        a1=$('p[name=Q1]').text();
+        console.log("Q1 is ",a1);  
+    }
+</script>-->
+
+</head>
+<body>
+    <form  action="recruit/submitexam" method="POST" id="form1">
+    	<div class="contentT">
+	    	<h1 style="display: block;">面试题目(总共5题)</h1>
+	    	<div style="height: 50px; width: 100%;">
+	    		<h3>共5题，每题20分，总分100分。</h3>
+	    		<!--<h4>计时：1:00</h4>-->
+	    	</div>
+	    	<hr style="border-top:2px dotted #444444; width: 100%; float: left;" >
+	    	<div class="questionText">
+	    		<div class="view">
+	    			<p name="Q1">1:在上课之前我需要做好哪些准备以确保阅读活动能够对孩子有效果？</p>
+	    			<textarea name="An1" class="textareaT" placeholder="答：" value=""></textarea>
+	    			<hr>
+	    		</div>
+	    		<div class="view">
+	    			<p name="Q2">2.我需要设计哪些小活动才能提高孩子参与的积极性，不让孩子觉得上我的课很无聊？</p>
+	    			<textarea name="An2" class="textareaT" placeholder="答：" value=""></textarea>
+	    			<hr>
+	    		</div>
+	    		<div class="view">
+	    			<p name="Q3">3.我应该设计哪些问题才能促进孩子思考，帮助孩子进一步理解文本？请举例。</p>
+	    			<textarea name="An3" class="textareaT" placeholder="答：" value=""></textarea>
+	    			<hr>
+	    		</div>
+	    		<div class="view">
+	    			<p name="Q4" >4.当孩子在发言时，我需要做什么？接下来又需要做什么？</p>
+	    			<textarea name="An4" class="textareaT" placeholder="答：" value=""></textarea>
+	    			<hr>
+	    		</div>
+	    		<div class="view">
+	    			<p name="Q5">5.在每次上完课后，我为什么都需要去反思？</p>
+	    			<textarea name="An5" class="textareaT" placeholder="答：" value=""></textarea>
+	    			<hr>
+	    		</div>
+	    		<p>答题人：<input type="text" name="tester" style="border-bottom: 1px solid black; width: 80px; border-top-width: 0; border-right-width: 0; border-left-width: 0;"></p>
+
+	    		<p>电话：<input type="text" name="telphone" style="border-bottom: 1px solid black; width: 80px; border-top-width: 0; border-right-width: 0; border-left-width: 0;"></p>
+
+	    		<p>邮件：<input type="text" name="mail" style="border-bottom: 1px solid black; width: 80px; border-top-width: 0; border-right-width: 0; border-left-width: 0;"></p>
+	    		
+	    	</div>
+    	</div>
+
+
+    	<input type="submit" value="提交" class="submitT" />
+	  <!--  <div style="text-align:center; width:820px; margin:0 auto;">
+	        <div class="go" id="divGo">
+	            <a title="返回顶部" class="top" href="javascript:void(0);" onclick="gotop();"></a>
+	            <a title="返回底部" class="bottom" href="javascript:void(0);" onclick="gobottom();"></a>
+	        </div>
+	    </div>
+	    <script type="text/javascript">
+	         function gotop(){
+	            window.scroll(0,0);
+	        }
+	         function gobottom(){
+	            window.scroll(0,99999);
+	        }
+	     </script>-->
+    </form>
+
+
+<!-- footer -->
+	<div class="footer">
+		<div class="container" style="text-align: center;margin-top: 80px; bottom: 0;">
+		
+			<p>
+				粤ICP备17055434号-1 版权所有：深圳市南方微学网络有限公司
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>南方微学</title>
+
+
+<style type="text/css">
+    #address select{width: 80px;height: 40px;border: 1px solid #c0c0c0;border-radius: 5px;outline: none;}
+    #address select option{width: 80px;max-width: 100px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    pre{
+        background-color: pink;
+        height: 220px;
+    }
+
+    .index_cyE{
+       /* border-top-right-radius: 5px;*/
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 80px;
+        height: 180px;
+        background-color: #fdb933;
+        /*background: url(../images/index_cy.png);*/
+        position: fixed;
+        right: 0;
+        top: 30%;
+      /*  margin-top: -230px;*/
+        color: red;
+        background-position: 62px 0;
+        text-align: center;
+        font-size: 28px;
+        cursor: pointer;
+      }
+</style>
+
+</head>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/swipebox.css">
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet"  href="css/add.css">
+
+
+<link href="css/paper-bootstrap-wizard.css" rel="stylesheet" />
+
+<script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+<script src="js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/addres.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#address").selectAddress()
+        $("#town").focusout(function(){
+            var province = $("#province option:selected").html()
+            var city = $("#city option:selected").html()
+            var town = $("#town option:selected").html()
+            if(province!= '选择省份' && city!="选择城市" && town!='选择区域'){
+                console.log('省份/直辖市：'+province+'\n城市:'+city+'\n区/县：'+town)
+            }
+        })
+    })
+    
+</script>
+
+<!--<script src="js/magicL.js"></script>  -->
+
+<script src="js/magicL1.js"></script>
+
+</head>
+<body >
+	<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">南方微学</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+ 						<div style=" float: left;"><a class="navbar-brand" href="index.html"><i class="glyphicon glyphicon-education" aria-hidden="false" style=" background-image:url(images/logo2.png); background-repeat:no-repeat; width: 58px; height: 59px; background-size:100% 100%; margin-left:11px; "></i></a>
+ 						</div>
+ 						<div class="weixuenet">南方微学</div>
+
+                    </div>
+					
+					<div class="collapse navbar-collapse nav-wil collapse in" id="bs-example-navbar-collapse-1" >
+						<ul class="nav navbar-nav">
+							<li><a class="hvr-overline-from-center button2" href="index.html">首页</a></li>
+							<li><a class="hvr-overline-from-center button2 active" href="course.html">课程</a></li>
+							<li><a class="hvr-overline-from-center button2" href="join_us.html">加入我们</a></li>
+							<li><a class="hvr-overline-from-center button2" href="contact.html">联系我们</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+    </div>
+
+    <div class="CourseView1">
+    	<ul><li>品牌简介</li></ul>
+    	<p>
+            &nbsp;&nbsp;我们有专业的师资团队。首先进过严格的资格审核、岗前培训，考核通过才录用；然后进行系统化的日常监督、抽查和家长反馈，中途对不适合的教师进行再培训，如果再培训还是不适合直接不录用。<br>
+            &nbsp;&nbsp;我们上课模式多样。中文有线下VIP小组式阅读和线上打卡阅读；英文有线下双师（一个外教+一个中文助教）小组式阅读和线上打卡阅读。<br>
+            &nbsp;&nbsp;我们有系统的贴身服务。为每位学生建立成长档案，跟每位家长及时沟通了解家长的需求，全程令家长满意，同时我们还会举办家长研讨会，共同探讨教育。<br>
+            &nbsp;&nbsp;我们秉着能力与成绩并重的原则，培养学生良好的阅读习惯、提升阅读技能，最后构建完整的知识体系。<br>
+
+            &nbsp;&nbsp;中文：涉猎古今中外的文学、历史、地理、自然科普、艺术类、社科、哲学知识；成语、名言警句、古诗词的积累；覆盖小学常规教学的文化常识，与考点紧密结合，提升成绩，同时自主研发教材覆盖各类跨学科知识点，教学内容远超国家标准。以文本为工具，精心设计活动环节及启发式问题促进学生发问、思考，提升听说技能；使用思维导图；进行课堂写作。<br>
+
+
+            &nbsp;&nbsp;英文：通过欧美经验丰富的外教配以专业的英语中教，让英语教学更本土化，更适合中国孩子；配以专业的反馈机制，让孩子的进步呈现更体系<br>
+
+
+            &nbsp;&nbsp;科技：南方微学科技课程秉承“玩中学，做中学”的教育理念，注重开发儿童的创造力、想象力，能够有效培养和提升孩子的专注力，动手能力，语言表达能力，逻辑思维能力，团体协作能力、发现问题解决问题的能力。STEM+AS模式教学方式和内容，趣味性强，集科学、技术、工程、数学、艺术、社会人文知识为一体，为初高中的学习成长打下基础。<br>
+            </p>
+    	
+    </div>
+
+    <div class="CourseView2">
+    	<div class="CourseView2Left">
+    		<div class="CourseView2LeftImg">
+    			<p>中文</p>
+    		</div>
+    	</div>
+
+    	<div class="CourseView2right">
+    		<ul><li class="CourseView2rightLi">产品</li></ul>
+    		<div class="CourseList">
+    			<ul class="rise-about-class">
+			        <li>
+			            <div class="about-class-tt class-rise1">
+			                <em><img src="image/2goods_1.jpg" class="goodsImg"/></em>
+			                <p>
+			                    中文精深阅读分析
+			                </p>
+			            </div>
+			            <div class="about-class-mess">
+			                中文精深阅读分析小组课以4-6人圆桌小组讨论分析为上课形式，依托于自主研发的分级阅读教材，配备精心设计阅读辅助思维工具，精选国内外文学名著、历史类、地理类、自然科普类、社会类书目，去帮助孩子链接考试，开阔视野、拓深思维、培养阅读习惯、思辨能力、提升写作能力以培养学生的未来成长所需的真实有效的学习能力及综合素质为最终目的。</div>
+			            <div class="about-class-button class-rise1">
+			                <a id="btn_goods" style=" cursor: pointer;"><input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods"></a>
+                        </div>
+			        </li>
+			        <li class="ul01">
+			            <div class="about-class-tt class-rise2">
+			               <em><img src="image/2goods_2.jpg" class="goodsImg0"/></em>
+			                <p>
+			                    VIP移动图书馆</p>
+			            </div>
+			            <div class="about-class-mess">
+			                阅读专业老师每周两次线上课导读，精选16本分级书籍，平均每周阅读一本书，学生参与输出打卡3次；老师提供线上专业指导，管理及跟踪服务，跨越时空限制；孩子结伴阅读打卡可以相互支持，走得更远；专业的阅读思维工具运用指导及练习；致力于促进孩子阅读兴趣，培养阅读习惯，提升阅读技能，为孩子的持续学习打好坚实基础。</div>
+			            <div class="about-class-button class-rise2">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			        <li class="ul01">
+			            <div class="about-class-tt class-rise3">
+			                <em><img src="image/2goods_3.jpg" class="goodsImg1"/></em>
+			                <p>
+			                    创意四点半课堂</p>
+			            </div>
+			            <div class="about-class-mess">
+			                创意四点半课堂是为学校提供的专业系统的特色课程服务。依据年级定制分级式书籍，以专业的思维工具辅助孩子阅读分析，进行主题研究式阅读、多角度对比分析阅读，以主题研究所、辩论俱乐部、演讲队三种形式对外进行输出。通过实践增强书籍阅读，扩大知识储备，形成特色专长，基础素养并存，拓宽思维角度，创造乐学平台，形成良性习惯。</div>
+			            <div class="about-class-button class-rise3">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			    </ul>
+    		</div>
+    		<ul><li class="CourseView2rightLi">上课案例</li></ul>
+    		<div class="CourseList-example">
+    			<img src="image/2class_1.jpg" class="example-img" />
+    			<img src="image/2class_2.jpg" class="example-img img01" />
+    			<img src="image/2class_3.jpg" class="example-img img01" />
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+    <div class="CourseView2">
+    	<div class="CourseView2Left">
+    		<div class="CourseView2LeftImg">
+    			<p>英文</p>
+    		</div>
+    	</div>
+
+    	<div class="CourseView2right">
+    		<ul><li class="CourseView2rightLi">产品</li></ul>
+    		<div class="CourseList">
+    			<ul class="rise-about-class">
+			        <li>
+			            <div class="about-class-tt class-rise1">
+			                <em><img src="image/1goods_1.png" class="goodsImg"/></em>
+			                <p>
+			                    原版英文小组课程
+			                </p>
+			            </div>
+			            <div class="about-class-mess">
+			                美国原版英文课程服务于4-15岁中国孩子，在纯英文的环境中，以原版美国教材为支撑，通过原版动画，歌曲，游戏，故事，演讲，辩论，小组合作，任务教学法等多元化的教学手法，致力于帮助孩子们培养听说读写能力，锻炼沟通、协作、创造、问题解决，批判性思维等软技能，应对学校考试的同时，提升综合竞争力。</div>
+			            <div class="about-class-button class-rise1">
+			               <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			        <li class="ul01">
+			            <div class="about-class-tt class-rise2">
+			               <em><img src="image/1goods_2.jpg" class="goodsImg0"/></em>
+			                <p>
+			                   双语美国小学英语</p>
+			            </div>
+			            <div class="about-class-mess">
+			                南微原版英文小组参考CCSS教学体系，以美国最受欢迎的Raz-kids分级阅读教材为主，通过中外教老师双向指导的学习方式与广泛的原版阅读知识积累，培养孩子的听、所，读，写能力及阅读策略、技巧，提高学生阅读的自主性，让学生的阅读能力得到质的提升。</div>
+			            <div class="about-class-button class-rise2">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			        <li class="ul01">
+			            <div class="about-class-tt class-rise3">
+			                <em><img  src="image/1goods_3.jpg" class="goodsImg1"/></em>
+			                <p>
+			                    创意四点半课堂</p>
+			            </div>
+			            <div class="about-class-mess">
+			                原版英文创意阅读课程以原版读物和各种阅读策略为核心，通过英文海报创作、讲故事、演故事主题式的线下阅读活动及线上阅读APP，让学生在4:30课堂体会原版精读与泛读，全面带动听说读写能力，打造学校英文精英社团。</div>
+			            <div class="about-class-button class-rise3">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			    </ul>
+    		</div>
+    		<ul><li class="CourseView2rightLi">上课案例</li></ul>
+    		<div class="CourseList-example">
+    			<img src="image/1class_1.jpg" class="example-img" />
+    			<img src="image/1class_2.jpg" class="example-img img01" />
+    			<img src="image/1class_3.jpg" class="example-img img01" />
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+
+    <div class="CourseView2">
+    	<div class="CourseView2Left">
+    		<div class="CourseView2LeftImg">
+    			<p>科技</p>
+    		</div>
+    	</div>
+
+    	<div class="CourseView2right">
+    		<ul><li class="CourseView2rightLi">产品</li></ul>
+    		<div class="CourseList">
+    			<ul class="rise-about-class">
+			        <li>
+			            <div class="about-class-tt class-rise1">
+			                <em><img src="image/3goods_1.jpg" class="goodsImg"/></em>
+			                <p>
+			                    雏鹰创客
+			                </p>
+			            </div>
+			            <div class="about-class-mess">
+			                通过科学、工程、技术、数学、社会人文的学习知识，学习科学启蒙、物质认知、空间结构，提高孩子的创新创造能力，逻辑推理能力，批判性思维和解决问题能力。培养孩子的认真钻研、勇于探索、努力解决问题和与他人合作交流的习惯，让孩子在多学科的交叉学习中收获知识和心灵的启迪，综合提升，为创客实践打下基础。</div>
+			            <div class="about-class-button class-rise1">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			        <li class="ul01">
+			            <div class="about-class-tt class-rise2">
+			               <em><img src="image/3goods_2.jpg" class="goodsImg0"/></em>
+			                <p>
+			                    进阶创客</p>
+			            </div>
+			            <div class="about-class-mess">
+			                通过图形化编程、智能机器人应用知识的学习，学习编程逻辑、硬件结构设计，提高孩子项目学习能力。培养孩子的自信心、理解能力和系统化思考能力，让孩子在机器人项目学习中进阶成长，综合提升，为创客实践打下基础。</div>
+			            <div class="about-class-button class-rise2">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			        <li class="ul01">
+			            <div class="about-class-tt class-rise3">
+			                <em><img src="image/3goods_3.jpg" class="goodsImg1"/></em>
+			                <p>
+			                    创客实践</p>
+			            </div>
+			            <div class="about-class-mess">
+			                通过逻辑设计、智能应用的交互式学习项目，学习前沿的人工智能知识，综合提高孩子的创新创造能力，整合资源能力，团队合作能力和解决问题能力。深度训练发孩子的创造发明能力，提高21世纪个人竞争力。</div>
+			            <div class="about-class-button class-rise3">
+			                <a id="btn_goods" style=" cursor: pointer;">
+                                <input type="button" name="btn_goods" value="报名" onclick="btn_goods()"  class="class_goods">
+                            </a>
+                        </div>
+			        </li>
+			    </ul>
+    		</div>
+    		<ul><li class="CourseView2rightLi">上课案例</li></ul>
+    		<div class="CourseList-example">
+    			<img src="image/3class_1.jpg" class="example-img" />
+    			<img src="image/3class_2.jpg" class="example-img img01" />
+    			<img src="image/3class_3.jpg" class="example-img img01" />
+    		</div>
+    		
+    	</div>
+    	
+    </div>
+
+    <div class="CourseView3">
+    <!--	<h2>教育研讨会</h2>-->
+		<h3 class="tittle" style="color: black;">特色服务-家长研讨</h3> 	
+    	<p>
+			&nbsp;&nbsp;父母是孩子的第一任老师，更是孩子的终身老师。家长是孩子人生道路的影响者和引导者，每位家长都希望自己的子女能够更优秀，不仅仅是成绩优秀，综合素养更要突出，成为“牛娃”。可你真的知道孩子在不同阶段的心理，孩子的需求么。教育不是给的越多越好，而是要给与正确的。这里有教育专家、名校名师、牛娃家长……，加入南方微学家长研讨会让我们一起探讨孩子成长中遇到的问题，解答家长的困惑，寻找助力孩子成长的高效方法。家长对孩子成长的认识，决定了孩子的高度。让我们与孩子共同成长！<br>
+        </p>
+
+		<div class="image-container set-full-height" style=" width: 100%;">
+           
+            <div class="row">
+                
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="green" id="wizard">
+                            <form action="/recruit/submitapplication" method="POST" id="subForm">
+                                <div class="wizard-header" >
+                                    <h3 class="wizard-title" style="color: black;">欢迎加入南方微学</h3>
+                                    <!--    <p class="category">_结伴成长 深度学习 探索未知_</p>-->
+                                </div>
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li>
+                                            <a href="#location" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-map"></i>
+                                                </div>
+                                                信息填写
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" >
+                                    <div class="tab-pane" id="location" style="overflow-y:scroll;overflow-x:hidden; height: 400px; ">
+                                        <div class="row">
+                                            <div class="col-sm-5 col-sm-offset-1" style="margin-top: 20px;">
+                                                <div class="form-group">
+                                                    <label>姓名</label>
+                                                    <input type="text"
+                                                    name="name" class="form-control" id="partnername"  value="" placeholder="请填写真实姓名" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5" style="margin-top: 20px;">
+                                                <div class="form-group">
+                                                    <label>性别</label><br>
+                                                    <select name="gender" id="coperG" class="form-control">
+                                                        <option disabled="" selected="">性别</option>
+                                                        <option value="男"> 男 </option>
+                                                        <option value="女"> 女 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>出生日期</label>
+                                                    <div style="width: 100%; ">
+                                                       <select name="birthYear" class="form-controls" style="float: left;width:50%;border-radius:5px;background-color:#eee;height:40px;" id="coperYear">
+                                                            <option disabled="" selected="">年份</option>
+                                                            <option value="2002年">2002年</option>
+                                                            <option value="2001年">2001年</option>
+                                                            <option value="2000年">2000年</option>
+                                                            <option value="1999年">1999年</option>
+                                                            <option value="1998年">1998年</option>
+                                                            <option value="1997年">1997年</option>
+                                                            <option value="1996年">1996年</option>
+                                                            <option value="1995年">1995年</option>
+                                                            <option value="1994年">1994年</option>
+                                                            <option value="1993年">1993年</option>
+                                                            <option value="1992年">1992年</option>
+                                                            <option value="1991年">1991年</option>
+                                                            <option value="1990年">1990年</option>
+                                                            <option value="1989年">1989年</option>
+                                                            <option value="1988年">1988年</option>
+                                                            <option value="1987年">1987年</option>
+                                                            <option value="1986年">1986年</option>
+                                                            <option value="1985年">1985年</option>
+                                                            <option value="1984年">1984年</option>
+                                                            <option value="1983年">1983年</option>
+                                                            <option value="1982年">1982年</option>
+                                                            <option value="1981年">1981年</option>
+                                                            <option value="1980年">1980年</option>
+                                                            <option value="1979年">1979年</option>
+                                                            <option value="1978年">1978年</option>
+                                                            <option value="1977年">1977年</option>
+                                                            <option value="1976年">1976年</option>
+                                                            <option value="1975年">1975年</option>
+                                                            <option value="1974年">1974年</option>
+                                                            <option value="1973年">1973年</option>
+                                                            <option value="1972年">1972年</option>
+                                                            <option value="1971年">1971年</option>
+                                                            <option value="1970年">1970年</option>
+                                                            <option value="1969年">1969年</option>
+                                                            <option value="1968年">1968年 </option>
+                                                            <option value="1967年">1967年</option>
+                                                            <option value="1966年">1966年</option>
+                                                            <option value="1965年">1965年</option>
+                                                       </select>
+
+                                                        <select name="birthMonth" class="form-controls" style=" float: left;width:50%;border-radius:5px;background-color: #eee;height: 40px;" id="coperMonth">
+                                                            <option disabled="" selected="">日期</option>
+                                                            <option value="1月">1月</option>
+                                                            <option value="2月">2月</option>
+                                                            <option value="3月">3月</option>
+                                                            <option value="4月">4月</option>
+                                                            <option value="5月">5月</option>
+                                                            <option value="6月">6月 </option>
+                                                            <option value="7月">7月</option>
+                                                            <option value="8月">8月</option>
+                                                            <option value="9月">9月</option>
+                                                            <option value="10月">10月</option>
+                                                            <option value="11月">11月</option>
+                                                            <option value="12月">12月</option>
+                                                        </select>
+                                                    </div>
+
+                                                 </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>婚姻状况</label><br>
+                                                    <select name="gender" class="form-control" id="coperM">
+                                                        <option selected="" value="">未婚</option>
+                                                        <option value="男"> 已婚 </option>
+                                                        <option value="女"> 离异 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>联系方式</label>
+                                                    <input id="coperTel" name="grade" type="text" class="form-control" placeholder="请输入联系电话" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>电子邮箱</label><br>
+                                                    <input id="coperEmail" name="major" type="text" class="form-control" placeholder="请输入电子邮箱">
+                                                 </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group" >
+                                                    <label>现居住地</label>
+                                                    <div id="address">
+                                                        <select class="select" id="province" name="province">
+                                                            <option value="">选择省份</option>
+                                                        </select>
+
+                                                        <select name="city" id="city">
+                                                            <option value="">选择城市</option>
+                                                        </select>
+
+                                                        <select name="town" id="town">
+                                                            <option value="">选择区域</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="wizard-footer">
+                                            <div style="margin: auto;">
+                                                <input type="submit" id="coperBtn"  style="margin: auto; display: block;" class="btn-wd btn-success btn-success btn btn-finish btn-fill" value="提交" />
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+             
+            </div>
+        </div>
+    	
+    </div>
+
+
+    <script type="text/javascript">
+        /*打开预约框*/
+        function btn_appoint(){
+            var appoint=document.getElementById("appoint1");
+            appoint.style.display = "block";
+
+            var buy_good = document.getElementById("buy_goods");  
+            buy_good.style.display = "none";
+        } 
+        /*关闭预约框*/
+        function deleteBtn_appont()   
+        {   
+            var appoint1 = document.getElementById("appoint1");  
+            appoint1.style.display = "none";
+        }
+        /*打开报名框*/
+        function btn_goods()   
+        {   
+            var buy_good = document.getElementById("buy_goods");  
+            buy_good.style.display = "block"; 
+
+            var appoint1 = document.getElementById("appoint1");  
+            appoint1.style.display = "none";
+        }  
+
+        //点击提交（报名）
+        $(document).on("click", "#presetRoll", function () {
+			var appoint1 = document.getElementById("appoint1");  
+			var shouModol = document.getElementById("appointSuccessId");
+            console.log("提交");
+            // appoint1.style.display = "none";
+            // appointSuccessId.style.display = "block";
+            //myrefresh();
+            $.ajax({
+                type: 'post',
+                url: '/recruit/submitcourseapp',
+                data: JSON.stringify({
+                    "name": $('#name').val(),
+                    "gender": $('#gender').val(),
+                    "birthdate":$('#birthdate').val(),
+                    "grade": $('#grade').val(),
+                    "tel": $('#tel').val(),
+                    "school": $('#school').val(),
+                    "address": $('#address').val(),
+                    "updatetime":""
+                }),
+                contentType: "application/json",
+                //dataType: 'json',
+                dataType: 'text',
+                timeout: 5000,
+                success: function (data) {
+                    console.log("提交成功66");
+                    //弹出成功提交
+                    appoint1.style.display = "none";
+                    appointSuccessId.style.display = "block";
+                    deleteBtn();
+                    myrefresh();
+                },
+                error: function (data) {
+                    console.log("提交失败667", data.status);
+                }
+            })
+            
+        })
+
+        
+
+
+        /*关闭报名框*/
+        function deleteBtn()   
+        {   
+            var buy_good = document.getElementById("buy_goods");  
+            buy_good.style.display = "none";
+        }
+
+        //点击提交（预约）
+        $(document).on("click", "#preset", function () {
+			var name = document.getElementById("name").value;
+			var tel = document.getElementById("tel").value;
+			var appoint1 = document.getElementById("appoint1");  
+			var shouModol = document.getElementById("appointSuccessId");
+			var prompt = document.getElementById("promptH6");
+            console.log("提交成功665",$('#name').val(),$('#tel').val());
+            if (name !== "" && tel !== "") {
+                appoint1.style.display = "none";
+                appointSuccessId.style.display = "block";
+                //刷新页面
+                //myrefresh();
+                $.ajax({
+                    type: 'post',
+                    url: '/recruit/submitcourseapp',
+                    data: JSON.stringify({
+                        "name": $('#name').val(),
+                        "gender": "",
+                        "birthdate": "",
+                        "grade": "",
+                        "tel": $('#tel').val(),
+                        "school": "",
+                        "address": "",
+                        "updatetime": ""
+                    }),
+                    contentType: "application/json",
+                    //dataType: 'json',
+                    dataType: 'text',
+                    timeout: 5000,
+                    success: function (data) {
+                        console.log("提交成功66");
+                        //弹出成功提交
+                        appoint1.style.display = "none";
+                        appointSuccessId.style.display = "block";
+                        myrefresh();
+                    },
+                    error: function (data) {
+                        console.log("提交失败667", data.status);
+                    }
+                })
+            } else {
+                prompt.style.display = "block";
+
+            }
+        })
+        //刷新
+		function myrefresh()
+		{
+			//window.location.reload();
+            document.forms[0].reset();
+            document.forms[1].reset();
+        } 
+        
+
+        
+        //合伙人信息提交
+        // $(document).on("click", "#coperBtn", function () {
+        //     console.log("提交65");
+        //     var gender=$("#coperG option:selected").text();
+        //     var birthdate=$("#coperYear option:selected").text()+$("#coperMonth option:selected").text();
+        //     var marital=$("#coperM option:selected").text();
+        //     var addres=$("#province option:selected").text()+$("#city option:selected").text()+$("#town option:selected").text();
+        //     $.ajax({
+        //         type: 'post',
+        //         url: 'recruit/submitpartner',
+        //         data: JSON.stringify({
+        //             "partnername": $('#partnername').val(),
+        //             "gender": gender,
+        //             "birthdate": birthdate,
+        //             "marital": marital,
+        //             "tel": $('#coperTel').val(),
+        //             "email": $('#coperEmail').val(),
+        //             "address": addres
+        //         }),
+        //         contentType: "application/json",
+        //         //dataType: 'json',
+        //         dataType: 'text',
+        //         timeout: 5000,
+        //         success: function (data) {
+        //             alert("提交成功！");
+        //             console.log("提交成功66");
+        //             //弹出成功提交
+        //             appoint1.style.display = "none";
+        //             appointSuccessId.style.display = "block";
+        //             myrefresh();
+        //         },
+        //         error: function (data) {
+        //             console.log("提交失败667", data.status);
+        //         }
+        //     })
+            
+        // })
+        
+    </script>
+
+    <!--预约试听课-->
+    <div class="index_cy_appont" onclick="btn_appoint()"></div>
+
+    <div class="TriRes_appoint" id="appoint1">
+        <div class="TriRes_con_appoint">
+            <div class="delete_goods" onclick="deleteBtn_appont()"></div>
+            <h1>预约试听课</h1>
+            <form method="post" action="" id="pro_yuyue_form">
+                <ul>
+                <li class="first">
+                    <span>姓名</span>
+                    <strong><input type="text" id="name" name="YuYueUser.name" placeholder="姓名"></strong>
+                </li>
+				<li class="first">
+                    <h6 class="promptH6" id="promptH6">姓名或者电话不能为空</h6>
+                </li>
+                <li class="first">
+                    <span>联系电话</span>
+                    <strong><input type="text" id="tel" name="YuYueUser.tel" placeholder="联系电话"></strong>
+                </li>
+                </ul>
+				
+				<!--<h4 class="prompt">姓名或者电话不能为空</h4>-->
+                <h2 id="preset"><a>立即预约</a> </h2>
+            </form>
+        </div>
+
+    </div>
+
+    <!--预约成功弹出框-->
+	<div class="appointSuccess" id="appointSuccessId">
+		<p>恭喜你，预约成功！</p>
+	</div>
+
+    <!--商品报名-->
+
+
+    <div class="TriRes_goods" id="buy_goods">
+        <div class="TriRes_con_goods">
+            <div class="delete_goods" onclick="deleteBtn()"></div>
+            <h1>课程报名表</h1>
+            <form method="post" action="" id="pro_yuyue_form">
+                <ul>
+                <li class="first">
+                <span>姓名</span>
+                <strong><input type="text" id="name" placeholder="姓名"></strong>
+                </li>
+                <li>
+                    <span>性别</span>
+                    <strong><input type="text" id="gender" placeholder="性别"></strong>
+                </li>
+                <li>
+                    <span>出生年份</span>
+                    <strong><input type="text" id="birthdate" placeholder="出生年份"></strong>
+                </li>
+                <li>
+                    <span>年级</span>
+                    <strong><input type="text" id="grade" placeholder="年级"></strong>
+                </li>
+                <li>
+                    <span>联系电话</span>
+                    <strong><input type="text" id="tel" placeholder="联系电话"></strong>
+                </li>
+                <li>
+                    <span>学校</span>
+                    <strong><input type="text" id="school" placeholder="学校"></strong>
+                </li>
+                <li>
+                    <span>家庭住址</span>
+                    <strong><input type="text" id="address" placeholder="家庭住址"></strong>
+                </li>
+                </ul>
+                <h2 id="presetRoll"><a>立即报名</a> </h2>
+            </form>
+        </div>
+
+    </div>
+
+
+	
+
+	<footer class="xue-footer xue-mall-footer am-text-center" style="text-align: center; background-color: white; padding-top: 50px; padding-bottom: 20px;border-top: 3px solid #b5b5b5; color: black;">
+            <p>
+                <a href="index.html" style="color: black;">首页</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="course.html" style="color: black;">课程</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="join_us.html" style="color: black;">加入我们</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="contact.html" style="color: black;">联系我们</a>
+            </p>
+            <div class="am-footer-miscs ">
+                <p>
+                    客服电话： <strong class="am-text-danger">13332987602</strong>
+                     Copyright &copy; 2014-2018&nbsp; www.yzschool.com.cn 深圳市南方微学网络有限公司 版权所有
+                </p>
+                <p>
+                    地址：深圳市南山区数字科技园A3栋5楼
+                    <a target="_blank" href=""  style="color: black;">粤ICP备17055434号-1</a>
+                    <a target="_blank" href="" style="color: black;">
+                        <img src="http://res11.xesimg.com/public/img/jgwab.png" class="xue-footer-record-icon" >
+                        粤ICP备17055434号-1
+                    </a>
+                </p>
+            </div>
+</footer>
+
+</body>
+</html>

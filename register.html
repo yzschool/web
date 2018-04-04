@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>南方微学招聘网站</title>
+
+
+    <style type="text/css">
+        #address select {
+            /*width: 80px;*/
+            width:30%;
+            height: 40px;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            outline: none;
+            margin-right:-15px;
+        }
+
+        #address select option {
+            width: 80px;
+            max-width: 100px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        pre {
+            background-color: pink;
+            height: 220px;
+        }
+
+        /*
+    .index_cy_appont{
+        width: 32px;
+        height: 32px;
+        background: url(../image/appointBtn.png) 0px 0px;
+        background-size: 100%;
+        position: fixed;
+        right: 10px;
+        bottom: 40px;
+        margin-top: -230px;
+        color: red;
+        cursor: pointer;
+        z-index: 9999;
+      }
+      .index_cy2_appont{
+        z-index: 9999;
+        width: 32px;
+        height: 32px;
+        background: url(../image/appointBtn.png) 0px 0px;
+        background-size: 100%;
+        position: fixed;
+        right: 10px;
+        bottom: 40px;
+        margin-top: -230px;
+        cursor: pointer;
+      }
+      .delete_goods{
+        width: 30px;
+        height: 30px;
+        background: url(../image/deleteBtn1.png) 0 0;
+        background-size: 100%;
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+
+
+    .TriRes_appoint{position:fixed;top: 45%;margin-top: -100px;right:52px;z-index: 999; height: 350px;display: none;}
+    .TriRes_con_appoint{width: 300px;background: rgba(125,125,125,0.8);height: 350px; margin: auto;}
+    .TriRes_con_appoint h1{text-align: center;color: #fff;font-size: 21px;width: 275px;margin: 0 auto;border-bottom: 1px solid #fff;line-height: 55px;height:55px;padding-top: 10px;}
+    .TriRes_con_appoint ul{}
+    .TriRes_con_appoint ul li{float: left;width: 115px;margin: 20px 0 0 30px;}
+    .TriRes_con_appoint ul li span{display:block;font-size: 16px;color: #fff;line-height: 45px;height: 45px;}
+    .promptH6{display:none;color: red;line-height: 20px;height: 20px; }
+    .TriRes_con_appoint ul li strong{display: block;}
+    .TriRes_con_appoint ul li strong input{width: 100%;height: 25px;background: #fff;color:black;font-size: 12px;padding: 0 5px;}
+    .TriRes_con_appoint ul .first{width: 260px;}
+    .TriRes_con_appoint h2{color: #fff;text-align: center;line-height: 40px;height: 40px;clear: both;padding-top:40px;}
+    .TriRes_con_appoint h2 a{display: block;color: #fff;font-size: 16px;margin: 0 auto;width:200px;background: #f09b1a; border-radius: 9px;}
+
+*/
+    </style>
+
+</head>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/swipebox.css">
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/add.css">
+
+
+<link href="css/paper-bootstrap-wizard.css" rel="stylesheet" />
+
+
+<script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+<script src="js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/addres.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#address").selectAddress()
+        $("#town").focusout(function () {
+            var province = $("#province option:selected").html()
+            var city = $("#city option:selected").html()
+            var town = $("#town option:selected").html()
+            if (province != '选择省份' && city != "选择城市" && town != '选择区域') {
+                console.log('省份/直辖市：' + province + '\n城市:' + city + '\n区/县：' + town)
+            }
+        })
+    })
+
+</script>
+
+<script src="js/magicL.js"></script>
+<!-- load our javascript file -->
+
+
+
+
+<body style="background-color: #f2f2f2; padding: 0px 0px;">
+   
+    <div class="feature" style=" padding-bottom: 47px; background-color: #ffffff; ">
+        <div class="container" style=" margin-top:-35px;">
+            <h3 class="tittle" >欢迎加入南方微学</h3>
+            <div class="col-md-5 features-left">
+                <img src="image/swiper1.png" alt="" />
+            </div>
+            <div class="col-md-7 features-right">
+                <!--<h4>南方微学网络有限公司给积极进取，努力提升，追求卓越的大学生群体提供了一个有深度、有宽度、有厚度的成长平台。</h4>-->
+                <p>你，处于黄金时代的你，渴望自己成为怎样的人？
+                    <br> 来吧！到这里来！抓住机遇，进行人生历练，迅速提升自己！
+                    <br> 这里就是由科技精英，跨界牛人，名企高管，北大校友打造的先进教育科技平台！在这里，你会获得前端的教育理念；会获取专业的能力、素养提升；能够得到先进的系统专业培训；能够与华为、腾讯等名企交流！
+                    <br> 来吧！充满激情和进取的你！点击这个窗口，你将会成就一个意想不到的人生！
+                </p>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <!--优秀案例版块-->
+    <div class="services" style="border-top: 1px solid #b5b5b5; margin-bottom: 47px; background-color: #ffffff;">
+       
+
+
+
+
+
+        <!--<a  name="Apply">-->
+        <div class="image-container set-full-height" style="border-top: 3px solid #b5b5b5; background-color: #e6e6e6; width: 100%;">
+
+            <div class="row">
+
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="green" id="wizard">
+                            <form action="/recruit/submitapplication" method="POST" id="subForm">
+                               <!-- <div class="wizard-header">
+                                    <h3 class="wizard-title">欢迎加入南方微学</h3>
+                                </div>-->
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li>
+                                            <a href="#location" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-map"></i>
+                                                </div>
+                                                信息填写
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="location">
+                                        <div class="row">
+                                            <div class="col-sm-5 col-sm-offset-1" style="margin-top: 20px;">
+                                                <div class="form-group">
+                                                    <label>姓名</label><span style="color:red;line-height: 1.42857143; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span>
+                                                    <input type="text" name="name" class="form-control" name="name" value="" placeholder="请填写真实姓名" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5" style="margin-top: 20px;">
+                                                <div class="form-group">
+                                                    <label>性别</label>
+                                                    <br>
+                                                    <select name="gender" class="form-control">
+                                                        <option disabled="" selected="">性别</option>
+                                                        <option value="男"> 男 </option>
+                                                        <option value="女"> 女 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>出生日期</label>
+                                                    <div style="width: 100%; ">
+                                                        <select name="birthYear" class="form-controls" style="float: left;width:50%;border-radius:5px;background-color:#eee;height:40px;"
+                                                            id="year">
+                                                            <option disabled="" selected="">年份</option>
+                                                            <option value="2002年">2002年</option>
+                                                            <option value="2001年">2001年</option>
+                                                            <option value="2000年">2000年</option>
+                                                            <option value="1999年">1999年</option>
+                                                            <option value="1998年">1998年</option>
+                                                            <option value="1997年">1997年</option>
+                                                            <option value="1996年">1996年</option>
+                                                            <option value="1995年">1995年</option>
+                                                            <option value="1994年">1994年</option>
+                                                            <option value="1993年">1993年</option>
+                                                            <option value="1992年">1992年</option>
+                                                            <option value="1991年">1991年</option>
+                                                            <option value="1990年">1990年</option>
+                                                            <option value="1989年">1989年</option>
+                                                            <option value="1988年">1988年</option>
+                                                            <option value="1987年">1987年</option>
+                                                            <option value="1986年">1986年</option>
+                                                            <option value="1985年">1985年</option>
+                                                            <option value="1984年">1984年</option>
+                                                            <option value="1983年">1983年</option>
+                                                            <option value="1982年">1982年</option>
+                                                            <option value="1981年">1981年</option>
+                                                            <option value="1980年">1980年</option>
+                                                            <option value="1979年">1979年</option>
+                                                            <option value="1978年">1978年</option>
+                                                            <option value="1977年">1977年</option>
+                                                            <option value="1976年">1976年</option>
+                                                            <option value="1975年">1975年</option>
+                                                            <option value="1974年">1974年</option>
+                                                            <option value="1973年">1973年</option>
+                                                            <option value="1972年">1972年</option>
+                                                            <option value="1971年">1971年</option>
+                                                            <option value="1970年">1970年</option>
+                                                            <option value="1969年">1969年</option>
+                                                            <option value="1968年">1968年 </option>
+                                                            <option value="1967年">1967年</option>
+                                                            <option value="1966年">1966年</option>
+                                                            <option value="1965年">1965年</option>
+                                                        </select>
+
+                                                        <select name="birthMonth" class="form-controls" style=" float: left;width:50%;border-radius:5px;background-color: #eee;height: 40px;"
+                                                            id="month">
+                                                            <option disabled="" selected="">日期</option>
+                                                            <option value="1月">1月</option>
+                                                            <option value="2月">2月</option>
+                                                            <option value="3月">3月</option>
+                                                            <option value="4月">4月</option>
+                                                            <option value="5月">5月</option>
+                                                            <option value="6月">6月 </option>
+                                                            <option value="7月">7月</option>
+                                                            <option value="8月">8月</option>
+                                                            <option value="9月">9月</option>
+                                                            <option value="10月">10月</option>
+                                                            <option value="11月">11月</option>
+                                                            <option value="12月">12月</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>学校</label>
+                                                    <br>
+                                                    <input name="university" type="text" class="form-control" placeholder="请输入就读学校" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>年级院系</label>
+                                                    <input name="grade" type="text" class="form-control" placeholder="请输入年级院系" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>专业名称</label>
+                                                    <br>
+                                                    <input name="major" type="text" class="form-control" placeholder="请输入专业名称">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>工作经验</label>
+                                                    <br>
+                                                    <select name="term" class="form-control">
+                                                        <option disabled="" selected="">年限</option>
+                                                        <option value="在读"> 在读 </option>
+                                                        <option value="应届毕业生"> 应届毕业生 </option>
+                                                        <option value="1年"> 1年 </option>
+                                                        <option value="2年"> 2年 </option>
+                                                        <option value="3年"> 3年 </option>
+                                                        <option value="4年"> 4年 </option>
+                                                        <option value="5年"> 5年 </option>
+                                                        <option value="6年"> 6年 </option>
+                                                        <option value="7年"> 7年 </option>
+                                                        <option value="8年"> 8年 </option>
+                                                        <option value="8年以上"> 8年以上 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>应聘职位</label>
+                                                    <input name="job" type="text" class="form-control" placeholder="请输入应聘职位">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>联系方式</label><span style="color:red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span>
+                                                    <br>
+                                                    <input name="tel" required="required" type="text" class="form-control" placeholder="请输入联系电话">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>电子邮箱</label>
+                                                    <input name="email" type="text" class="form-control" placeholder="请输入电子邮箱">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>现居住地</label>
+                                                    <div id="address">
+                                                        <select class="select" id="province" name="province">
+                                                            <option value="">省份</option>
+                                                        </select>
+
+                                                        <select name="city" id="city">
+                                                            <option value="">城市</option>
+                                                        </select>
+
+                                                        <select name="town" id="town">
+                                                            <option value="">区域</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>推荐人联系方式（选填）</label>
+                                                    <input name="referrer_tel" type="text" class="form-control" placeholder="请输入推荐人联系方式">
+                                                </div>
+                                            </div>
+                                          <!--  <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>请设置密码</label><span style="color:red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span>
+                                                    <br>
+                                                    <input id="FirstPassword" size="20" type="password" name="passwd" class="form-control" required="true" placeholder="请输入密码" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>确认密码</label><span style="color:red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span><span id="tishi"></span>
+                                                    <input id="SecondPassword" size="20" type="password" name="passwd" class="form-control" required="true" placeholder="请确认密码" onkeyup="KeyUp()">
+                                                </div>
+                                            </div>-->
+                                            <div class="col-sm-5s col-sm-offset-1">
+                                                <div class="form-group" style=" margin-left: 15px;">
+                                                    <label style="width: 90%;">自我介绍</label>
+                                                    <textarea name="introduce" type="text" class="form-control" placeholder="请输入自我介绍，特长以及未来从事职业方向" style="height: 150px; width: 90%;"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5s col-sm-offset-1">
+                                                <div class="form-group" style=" margin-left: 15px;">
+                                                    <label>工作经验</label>
+                                                    <textarea name="experience" type="text" class="form-control" placeholder="请输入工作描述" style="height: 200px;width: 90%;"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-footer">
+                                            <div style="margin: auto;">
+                                                <input id="submits1" type="submit" style="margin: auto; display: block;" class="btn-wd btn-success btn-success btn btn-finish btn-fill"
+                                                    value="提交" />
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+        <script type="text/javascript">
+            /*打开预约框*/
+            function btn_appoint() {
+                var appoint = document.getElementById("appoint1");
+                appoint.style.display = "block";
+
+            }
+            /*关闭预约框*/
+            function deleteBtn_appont() {
+                var appoint1 = document.getElementById("appoint1");
+                appoint1.style.display = "none";
+            }
+            // /*打开报名框*/
+            // function btn_goods() {
+            //     var appoint1 = document.getElementById("appoint1");
+            //     appoint1.style.display = "none";
+            // }
+            // /*关闭报名框*/
+            // function deleteBtn() {
+            //     var buy_good = document.getElementById("buy_goods");
+            //     buy_good.style.display = "none";
+            // }
+
+            
+            </script>
+
+        <!--预约试听课
+        <div class="index_cy_appont" onclick="btn_appoint()"></div>
+
+        <div class="TriRes_appoint" id="appoint1">
+            <div class="TriRes_con_appoint">
+                <div class="delete_goods" onclick="deleteBtn_appont()"></div>
+                <h1>预约试听课</h1>
+                <form method="post" action="" id="pro_yuyue_form">
+                    <ul>
+                        <li class="first">
+                            <span>姓名</span>
+                            <strong>
+                                <input type="text" id="name" name="mgeYuYueUser.name" placeholder="姓名">
+                            </strong>
+                        </li>
+                        <li class="first">
+                            <h6 class="promptH6" id="promptH6">姓名或者电话不能为空</h6>
+                        </li>
+                        <li class="first">
+                            <span>联系电话</span>
+                            <strong>
+                                <input type="text" id="tel" name="tel" placeholder="联系电话">
+                            </strong>
+                        </li>
+                    </ul>
+                    <h2 id="preset" onclick="ok_appont()">
+                        <a href="#">立即预约</a>
+                    </h2>
+                </form>
+            </div>
+
+        </div>-->
+
+        <!--预约成功弹出框
+        <div class="appointSuccess" id="appointSuccessId">
+            <p>恭喜你，预约成功！</p>
+        </div>-->
+
+       <!-- <footer class="xue-footer xue-mall-footer am-text-center" style="text-align: center; background-color: white; padding-top: 50px; padding-bottom: 20px;border-top: 3px solid #b5b5b5; color: black;">
+            <p>
+                <a href="index.html" style="color: black;">首页</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="course.html" style="color: black;">课程</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="join_us.html" style="color: black;">加入我们</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="contact.html" style="color: black;">联系我们</a>
+            </p>
+            <div class="am-footer-miscs ">
+                <p>
+                    联系电话：
+                    <strong class="am-text-danger">13332987602</strong>
+                    Copyright &copy; 2014-2018&nbsp; www.yzschool.com.cn 深圳市南方微学网络有限公司 版权所有
+                </p>
+                <p>
+                    地址：深圳市南山区数字科技园A3栋5楼
+                    <a target="_blank" href="" style="color: black;">粤ICP备17055434号-1</a>
+                    <a target="_blank" href="" style="color: black;">
+                        <img src="http://res11.xesimg.com/public/img/jgwab.png" class="xue-footer-record-icon"> 粤ICP备17055434号-1
+                    </a>
+                </p>
+            </div>
+        </footer>
+-->
+
+
+    </div>
+
+
+
+    
+
+    <!--</a>-->
+    <!--
+<script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=0af62220ee204909aae4b8b3ea934987" class="zhiCustomBtn" id="zhichiScript" data-args="属性名1=属性值1&属性名2=属性值2"></script>-->
+
+<!--判断两次输入的密码是否一致
+<script>
+    function KeyUp() {
+        var firstP = document.getElementById("FirstPassword").value;
+        var secondP = document.getElementById("SecondPassword").value;
+
+        if(firstP == secondP) {
+            document.getElementById("tishi").innerHTML="<font color='green'>&nbsp;两次密码相同</font>";
+            document.getElementById("submits1").disabled = false;
+        }
+        else {
+            document.getElementById("tishi").innerHTML="<font color='red'>&nbsp;两次密码不相同</font>";
+          document.getElementById("submits1").disabled = true;
+        }
+    }
+</script>-->
+</body>
+
+
+
+
+</html>

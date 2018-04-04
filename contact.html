@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>南方微学网络</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"  />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<link rel="stylesheet"  href="css/add.css">
+
+<!--引入百度地图-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=abi2Q8cMckBrGSTfixpzAKT07cFD2ujG"></script>
+
+
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<script src="js/modernizr.custom.js"></script>
+
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smoth-scrolling -->
+
+</head>
+<body  onload="document.forms[0].reset()">
+<div class="header">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">南方微学</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+ 						<div style=" float: left;"><a class="navbar-brand" href="index.html"><i class="glyphicon glyphicon-education" aria-hidden="false" style=" background-image:url(images/logo2.png); background-repeat:no-repeat; width: 58px; height: 59px; background-size:100% 100%; margin-left:11px; "></i></a>
+ 						</div>
+ 						<div class="weixuenet">南方微学</div>
+
+                    </div>
+					
+					<div class="collapse navbar-collapse nav-wil collapse in" id="bs-example-navbar-collapse-1" >
+						<ul class="nav navbar-nav">
+							<li><a class="hvr-overline-from-center button2" href="index.html">首页</a></li>
+							<li><a class="hvr-overline-from-center button2" href="course.html">课程</a></li>
+							<li><a class="hvr-overline-from-center button2" href="join_us.html">加入我们</a></li>
+							<li><a class="hvr-overline-from-center button2 active" href="contact.html">联系我们</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+</div>
+
+<div id="map">
+	<script type="text/javascript">
+    //创建和初始化地图函数：
+       function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(113.953939,22.539132),15);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"公司地址",title:"深圳市南方微学网络有限公司",imageOffset: {width:0,height:3},position:{lat:22.539138,lng:113.954137}}
+          ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+       var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+
+</div>
+
+<div class="contactT" style="background-color: #f5f3f0">
+	<div class="container">
+		<div class="contact-pages4">
+            <div class="contact-right4">
+            	<img src="image/weichat.png" class="contact-img4"/>
+            </div>
+            <div class="contact-left4">
+	            <p class="leads4">邮箱：robert_luo@yzschool.com.cn</p>
+	            <p class="leads4">联系电话：13332987602（罗老师）</p>
+	            <p class="leads4">联系地址：深圳市南山区数字科技园A3栋</p>
+            </div>
+		</div>
+	</div>
+</div>
+
+<footer class="xue-footer xue-mall-footer am-text-center" style="text-align: center; background-color: white; padding-top: 50px; padding-bottom: 20px;border-top: 3px solid #b5b5b5; color: black;">
+		    <p>
+		        <a href="index.html" style="color: black;">首页</a>
+		        <span class="am-footer-divider" style="color: black;">|</span>
+		        <a href="course.html" style="color: black;">课程</a>
+		        <span class="am-footer-divider" style="color: black;">|</span>
+		        <a href="join_us.html" style="color: black;">加入我们</a>
+		        <span class="am-footer-divider" style="color: black;">|</span>
+		        <a href="contact.html" style="color: black;">联系我们</a>
+		    </p>
+		    <div class="am-footer-miscs ">
+		        <p>
+		            客服电话： <strong class="am-text-danger">13332987602</strong>
+		             Copyright &copy; 2014-2018&nbsp; www.yzschool.com.cn 深圳市南方微学网络有限公司 版权所有
+		        </p>
+		        <p>
+		            地址：深圳市南山区数字科技园A3栋5楼
+		            <a target="_blank" href=""  style="color: black;">粤ICP备17055434号-1</a>
+		            <a target="_blank" href="" style="color: black;">
+		                <img src="http://res11.xesimg.com/public/img/jgwab.png" class="xue-footer-record-icon" >
+		                粤ICP备17055434号-1
+		            </a>
+		        </p>
+		    </div>
+</footer>
+
+    <script type="text/javascript">
+        /*打开预约框*/
+        function btn_appoint(){
+            var appoint=document.getElementById("appoint1");
+            appoint.style.display = "block";
+
+        } 
+        /*关闭预约框*/
+        function deleteBtn_appont()   
+        {   
+            var appoint1 = document.getElementById("appoint1");  
+            appoint1.style.display = "none";
+        }
+
+        //点击提交（预约）
+        $(document).on("click", "#preset", function () {
+			var name = document.getElementById("name").value;
+			var tel = document.getElementById("tel").value;
+			var appoint1 = document.getElementById("appoint1");  
+			var shouModol = document.getElementById("appointSuccessId");
+			var prompt = document.getElementById("promptH6");
+            console.log("提交name和tel",$('#name').val(),$('#tel').val());
+            if (name !== "" && tel !== "") {
+                appoint1.style.display = "none";
+                appointSuccessId.style.display = "block";
+                //刷新页面
+                //myrefresh();
+                $.ajax({
+                    type: 'post',
+                    url: '/recruit/submitcourseapp',
+                    data: JSON.stringify({
+                        "name": $('#name').val(),
+                        "gender": "",
+                        "birthdate": "",
+                        "grade": "",
+                        "tel": $('#tel').val(),
+                        "school": "",
+                        "address": "",
+                        "updatetime": ""
+                    }),
+                    contentType: "application/json",
+                    //dataType: 'json',
+                    dataType: 'text',
+                    timeout: 5000,
+                    success: function (data) {
+                        console.log("提交成功66");
+                        //弹出成功提交
+                        appoint1.style.display = "none";
+                        appointSuccessId.style.display = "block";
+                        myrefresh();
+                    },
+                    error: function (data) {
+                        console.log("提交失败667", data.status);
+                    }
+                })
+            } else {
+                prompt.style.display = "block";
+
+            }
+        })
+        //刷新
+		function myrefresh()
+		{
+			window.location.reload();
+		} 
+       
+        
+    </script>
+
+    <!--预约试听课-->
+    <div class="index_cy_appont" onclick="btn_appoint()"></div>
+
+    <div class="TriRes_appoint" id="appoint1">
+        <div class="TriRes_con_appoint">
+            <div class="delete_goods" onclick="deleteBtn_appont()"></div>
+            <h1>预约试听课</h1>
+            <form method="post" action="" id="pro_yuyue_form">
+                <ul>
+                    <li class="first">
+                        <span>姓名</span>
+                        <strong>
+                            <input type="text" id="name" name="YuYueUser.name" placeholder="姓名">
+                        </strong>
+                    </li>
+                    <li class="first">
+                        <h6 class="promptH6" id="promptH6">姓名或者电话不能为空</h6>
+                    </li>
+                    <li class="first">
+                        <span>联系电话</span>
+                        <strong>
+                            <input type="text" id="tel" name="YuYueUser.tel" placeholder="联系电话">
+                        </strong>
+                    </li>
+                </ul>
+                <!-- <h2 id="preset" onclick="deleteBtn_appont()"><a href="">立即预约</a> </h2> -->
+                <h2 id="preset"><a>立即预约</a> </h2>
+            </form>
+        </div>
+
+    </div>
+
+    <!--预约成功弹出框-->
+	<div class="appointSuccess" id="appointSuccessId">
+		<p>恭喜你，预约成功！</p>
+	</div>
+
+
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!--
+	<script type="text/javascript">
+		$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>-->
+<!-- //smooth scrolling -->
+
+</body>
+</html>

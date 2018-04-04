@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>南方微学招聘信息</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+
+</head>
+
+<body>
+    <p style=" text-align: center;">招聘信息</p>
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>出生日期</th>
+                <th>学校</th>
+                <th>院系</th>
+                <th>专业</th>
+                <!--
+                <th>年级</th>
+                <th>工作时间</th>
+                <th>面试职位</th>-->
+                <th>联系电话</th>
+                <th>现居住地</th>
+                <th>自我介绍</th>
+                <th>工作经验</th>
+            </tr>
+        </thead>
+      <!--  <tfoot>
+            <tr>
+                <th>name</th>
+                <th>gender</th>
+                <th>dateofbirth</th>
+                <th>schoolname</th>
+                <th>department</th>
+                <th>major</th>
+                <th>age</th>
+                <th>workexperience</th>
+                <th>positionapplied</th>
+                <th>telephone</th>
+                <th>residence</th>
+                <th>selfintroduce</th>
+                <th>jobdecription</th>
+            </tr>
+        </tfoot>-->
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                ajax: {
+                    url: 'http://www.yzschool.com.cn/recruit/getallcandidatetable',
+                },
+                columns: [
+                    { data: 'name' },
+                    { data: 'gender' },
+                    { data: 'dateofbirth' },
+                    { data: 'schoolname' },
+                    { data: 'department' },
+                    { data: 'major' },
+                    //{ data: 'age' },
+                    //{ data: 'workexperience' },
+                    //{ data: 'positionapplied' },
+                    { data: 'telephone' },
+                    { data: 'residence' },
+                    { data: 'selfintroduce' },
+                    { data: 'jobdecription' }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>

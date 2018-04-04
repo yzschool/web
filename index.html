@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<!DOCTYPE html>
+<html>-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>南方微学网络</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--控制整个页面的css  [style.css]-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/swipebox.css">
+<link rel="stylesheet"  href="css/add.css">
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--轮播按钮-->
+<script type="text/javascript" src="js/responsiveslides.min.js"></script>
+<!-- //js -->
+<script src="js/modernizr.custom.js"></script>
+
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(function () {
+		$("#slider").responsiveSlides({
+			auto: true,
+			pager: false,
+			nav: true,
+			speed: 500,
+			timeout:4000,
+			pager: true, 
+			pauseControls: true,
+			namespace: "callbacks"
+		});
+	});
+</script>
+
+</head>
+<body style="background-color: #f2f2f2; padding: 0px 0px;" onload="document.forms[0].reset()">
+<div class="header">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">南方微学</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+ 						<div style=" float: left;"><a class="navbar-brand" href="index.html"><i class="glyphicon glyphicon-education" aria-hidden="false" style=" background-image:url(images/logo2.png); background-repeat:no-repeat; width: 58px; height: 59px; background-size:100% 100%; margin-left:11px; "></i></a>
+ 						</div>
+ 						<div class="weixuenet">南方微学</div>
+
+                    </div>
+					
+					<div class="collapse navbar-collapse nav-wil collapse in" id="bs-example-navbar-collapse-1" >
+						<ul class="nav navbar-nav">
+							<li><a class="hvr-overline-from-center button2 active" href="index.html">首页</a></li>
+							<li><a class="hvr-overline-from-center button2" href="course.html">课程</a></li>
+							<li><a class="hvr-overline-from-center button2" href="join_us.html">加入我们</a></li>
+							<li><a class="hvr-overline-from-center button2" href="contact.html">联系我们</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+</div>
+
+<div class="callbacks_container">
+	<ul class="rslides" id="slider">
+		<li><a href="course.html"><img src="image/swiper.png" alt=""></a></li>
+		<li><a href="course.html"><img src="image/swiper1.png" alt=""></a></li>
+		<li><a href="course.html"><img src="image/swiper2.png" alt=""></a></li>
+	</ul>
+</div>
+
+<div class="facilities" style="border-top: 3px solid #b5b5b5;padding-bottom: 50px;">
+	<div class="container">
+		<h3 class="tittle" style="color: black;">课程亮点</h3> 	
+		<script src="js/jquery.swipebox.min.js"></script> 
+		<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+		</script>
+		<div class="view view-seventh" >
+            <a href="image/1point_1.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/1point_1.png" alt="" >
+            <div class="mask" style="z-index: 99;">
+                 <h4>原汁原味美国课堂</h4>
+                 <p>
+                 	欧美外教+原版教材+课堂深入导读与圆桌式讨论，每次课90分钟，3-6人小组，保证每个孩子在课堂上都有足够与外教交流的时间
+                 </p>
+            </div>
+        	</a>
+        	<div class="mask1">
+             	<span class="h42" >原汁原味美国课堂</span>
+            </div>
+
+        </div>
+        <div class="view view-seventh">
+            <a href="image/1point_2.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/1point_2.jpg" alt="" >
+            <div class="mask" style="z-index: 99;">
+                 <h4>专业小组定制课程</h4>
+                 <p>
+                   家长自行决定小组同伴与人数，外教上门授课，省去接送与等待的时间
+                 </p>
+            </div>
+        	</a>
+        	<div class="mask1">
+             	<span class="h42" >专业小组定制课程</span>
+            </div>
+        </div>
+        <div class="view view-seventh">
+            <a href="image/1point_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/1point_3.png" alt="">
+            <div class="mask" style="z-index: 99;">
+                 <h4>全程中教老师优质服务</h4>
+                <p>
+                   	小组专属助教老师，课前确认上课提醒及课堂道具准备，课中全程参与，协助课堂教学，课后落实学习内容，发送课外辅助材料，积极跟进孩子学习进度，了解孩子成长轨迹
+
+				</p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >全程中教老师优质服务</span>
+            </div>
+        </div>
+        <div class="view view-seventh">
+            <a href="image/2point_1.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/2point_1.jpg" alt="">
+            <div class="mask" style="z-index: 99;">
+                <h4>整本书深度阅读 </h4>
+                <p> 精选有关的传统经典、中国现当代名著、外国名著、绘本、童话、寓言、儿童文学、童谣、诗歌、散文、历史类、地理类、自然科普类、科幻类、名人传记类、社会类及哲学类书目去帮助孩子链接考试、开阔视野、拓深思维、培养阅读习惯、思辨能力、提升学习能力及丰富内涵及综合素养。 </p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >整本书深度阅读 </span>
+            </div>
+        </div>
+		<div class="view view-seventh">
+            <a href="image/2point_2.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/2point_2.jpg" alt="">
+            <div class="mask"  style="z-index: 99;">
+                <h4>小组讨论式学习</h4>
+                <p>转变老师的课堂主导地位，以学生为中心进行学习协助，引导同伴之间进行相互促进学习；提供有深度、有宽度的平台，让每一个孩子都参与讨论、分析、表达、写作；社区小伙伴结伴学习，老师上门带课，地点自选，自由便利； “圆桌小组课堂”讨论阅读学习随时随地可以开展。</p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >小组讨论式学习</span>
+            </div>
+        </div>
+		<div class="view view-seventh">
+            <a href="image/2point_3.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/2point_3.jpg" alt="">
+            <div class="mask" style="z-index: 99;">
+                <h4>跨学科，思考解决问题</h4>
+                <p>涉猎古今中外的文学知识、中外历史及地理知识、自然科普知识及社会生活哲理；以文本为媒介，提取精要之处，在古今中外的层面上进行横向、纵向对比分析；以文本为工具，使用精心策划的活动环节及问题设计、思维工具来促进学生发问、思辨，提升听说技能，最后帮助孩子提升解决问题的能力。</p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >跨学科，思考解决问题</span>
+            </div>
+        </div>
+        <div class="view view-seventh">
+            <a href="image/3point_1.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/3point_1.jpg" alt="">
+            <div class="mask" style="z-index: 99;">
+                <h4>发明实践课程</h4>
+                <p>包含150套科学实验及初级至高级创客编程活动，让孩子动手做项目，创造属于自己的科学发明。</p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >发明实践课程</span>
+            </div>
+        </div>
+		<div class="view view-seventh">
+            <a href="image/3point_2.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/3point_2.jpg" alt="">
+            <div class="mask" style="z-index: 99;">
+                <h4>项目式编程小组</h4>
+                <p>根据孩子兴趣安排相应难度的项目，让孩子在突破难题时获得成就感又不至于因为难度太大产生挫败感，小班授课，充分关注每一个学生，上课效果更显著。</p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >项目式编程小组</span>
+            </div>
+        </div>
+		<div class="view view-seventh">
+            <a href="image/3point_3.jpg" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="image/3point_3.jpg" alt="">
+            <div class="mask" style="z-index: 99;">
+                <h4>综合学科融合创新</h4>
+                <p>教学内容，集科学、技术、工程、数学、艺术、社会人文知识为一体，为初高中的学习成长打下基础。</p>
+                
+            </div></a>
+            <div class="mask1">
+             	<span class="h42" >综合学科融合创新</span>
+            </div>
+        </div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="feature" style=" background-color: white;border-top: 3px solid #b5b5b5;">
+    <div class="container"  style="padding-bottom: 50px;">
+        <h3 class="tittle">深圳市南方微学网络有限公司</h3> 
+        <div class="col-md-5 features-left">
+            <img src="image/map.png" alt=""/>
+        </div>
+        <div class="col-md-7 features-right">
+             <p>&nbsp;&nbsp;深圳市南方微学网络有限公司是一家由英特尔/华为等高端企业管理层、北大校友、高端IT技术人才、资深教育专家等组成的教育公司，总部位于南山数字科技园.<br>
+    		 &nbsp;&nbsp;我们致力于通过前沿的教育方法，全面提升孩子的综合素质，在孩子的成绩得到提升的同时，为未来的工作及生活储备基础。同时为家长提供应试以及素质教育全方位的前沿资讯，通过定期开展教育专题研讨活动，协助家长成为社区里有影响力的教育专家.<br>
+                </p>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<footer class="xue-footer xue-mall-footer am-text-center" style="text-align: center; background-color: white; padding-top: 50px; padding-bottom: 20px;border-top: 3px solid #b5b5b5; color: black;">
+		    <p>
+		        <a href="index.html" style="color: black;">首页</a>
+		        <span class="am-footer-divider" style="color: black;">|</span>
+		        <a href="course.html" style="color: black;">课程</a>
+		        <span class="am-footer-divider" style="color: black;">|</span>
+		        <a href="join_us.html" style="color: black;">加入我们</a>
+		        <span class="am-footer-divider" style="color: black;">|</span>
+		        <a href="contact.html" style="color: black;">联系我们</a>
+		    </p>
+		    <div class="am-footer-miscs ">
+		        <p>
+		            客服电话： <strong class="am-text-danger">13332987602</strong>
+		             Copyright &copy; 2014-2018&nbsp; www.yzschool.com.cn 深圳市南方微学网络有限公司 版权所有
+		        </p>
+		        <p>
+		            地址：深圳市南山区数字科技园A3栋5楼
+		            <a target="_blank" href=""  style="color: black;">粤ICP备17055434号-1</a>
+		            <a target="_blank" href="" style="color: black;">
+		                <img src="http://res11.xesimg.com/public/img/jgwab.png" class="xue-footer-record-icon" >
+		                粤ICP备17055434号-1
+		            </a>
+		        </p>
+		    </div>
+</footer>
+
+    <script type="text/javascript">
+        /*打开预约框*/
+        function btn_appoint(){
+            var appoint=document.getElementById("appoint1");
+            appoint.style.display = "block";
+
+           /* var buy_good = document.getElementById("buy_goods");  
+            buy_good.style.display = "none";*/
+        } 
+        /*关闭预约框*/
+        function deleteBtn_appont()   
+        {   
+            var appoint1 = document.getElementById("appoint1");  
+            appoint1.style.display = "none";
+        }
+        //点击提交（预约）
+        $(document).on("click", "#preset", function () {
+			var name = document.getElementById("name").value;
+			var tel = document.getElementById("tel").value;
+			var appoint1 = document.getElementById("appoint1");  
+			var shouModol = document.getElementById("appointSuccessId");
+			var prompt = document.getElementById("promptH6");
+            console.log("提交成功665",$('#name').val(),$('#tel').val());
+            if (name !== "" && tel !== "") {
+                appoint1.style.display = "none";
+                appointSuccessId.style.display = "block";
+                //刷新页面
+                //myrefresh();
+                $.ajax({
+                    type: 'post',
+                    url: '/recruit/submitcourseapp',
+                    data: JSON.stringify({
+                        "name": $('#name').val(),
+                        "gender": "",
+                        "birthdate": "",
+                        "grade": "",
+                        "tel": $('#tel').val(),
+                        "school": "",
+                        "address": "",
+                        "updatetime": ""
+                    }),
+                    contentType: "application/json",
+                    //dataType: 'json',
+                    dataType: 'text',
+                    timeout: 5000,
+                    success: function (data) {
+                        console.log("提交成功66");
+                        //弹出成功提交
+                        appoint1.style.display = "none";
+                        appointSuccessId.style.display = "block";
+                        myrefresh();
+                    },
+                    error: function (data) {
+                        console.log("提交失败667", data.status);
+                    }
+                })
+            } else {
+                prompt.style.display = "block";
+
+            }
+        })
+        //刷新
+		function myrefresh()
+		{
+			window.location.reload();
+		} 
+		
+        
+    </script>
+
+    <!--预约试听课-->
+    <div class="index_cy_appont" onclick="btn_appoint()"></div>
+
+    <div class="TriRes_appoint" id="appoint1">
+        <div class="TriRes_con_appoint">
+            <div class="delete_goods" onclick="deleteBtn_appont()"></div>
+            <h1>预约试听课</h1>
+            <form method="post" action="" id="pro_yuyue_form">
+                <ul>
+                <li class="first">
+                    <span>姓名</span>
+                    <strong><input type="text" id="name" name="YuYueUser.name" placeholder="姓名"></strong>
+                </li>
+				<li class="first">
+                    <h6 class="promptH6" id="promptH6">姓名或者电话不能为空</h6>
+                </li>
+                <li class="first">
+                    <span>联系电话</span>
+                    <strong><input type="text" id="tel" name="YuYueUser.tel" placeholder="联系电话"></strong>
+                </li>
+                </ul>
+				
+				<!--<h4 class="prompt">姓名或者电话不能为空</h4>-->
+                <h2 id="preset"><a>立即预约</a> </h2>
+            </form>
+        </div>
+    </div>
+
+	<!--预约成功弹出框-->
+	<div class="appointSuccess" id="appointSuccessId">
+		<p>恭喜你，预约成功！</p>
+	</div>
+
+<!-- //footer -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- smooth scrolling 
+	<script type="text/javascript">
+		$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>-->
+<!-- //smooth scrolling -->
+
+</body>
+</html>

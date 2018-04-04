@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>南方微学招聘网站</title>
+
+
+    <style type="text/css">
+    #address select{width: 80px;height: 40px;border: 1px solid #c0c0c0;border-radius: 5px;outline: none;}
+    #address select option{width: 80px;max-width: 100px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    pre{
+        background-color: pink;
+        height: 220px;
+    }
+
+/*
+    .index_cy_appont{
+        width: 32px;
+        height: 32px;
+        background: url(../image/appointBtn.png) 0px 0px;
+        background-size: 100%;
+        position: fixed;
+        right: 10px;
+        bottom: 40px;
+        margin-top: -230px;
+        color: red;
+        cursor: pointer;
+        z-index: 9999;
+      }
+      .index_cy2_appont{
+        z-index: 9999;
+        width: 32px;
+        height: 32px;
+        background: url(../image/appointBtn.png) 0px 0px;
+        background-size: 100%;
+        position: fixed;
+        right: 10px;
+        bottom: 40px;
+        margin-top: -230px;
+        cursor: pointer;
+      }
+      .delete_goods{
+        width: 30px;
+        height: 30px;
+        background: url(../image/deleteBtn1.png) 0 0;
+        background-size: 100%;
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+
+
+    .TriRes_appoint{position:fixed;top: 45%;margin-top: -100px;right:52px;z-index: 999; height: 350px;display: none;}
+    .TriRes_con_appoint{width: 300px;background: rgba(125,125,125,0.8);height: 350px; margin: auto;}
+    .TriRes_con_appoint h1{text-align: center;color: #fff;font-size: 21px;width: 275px;margin: 0 auto;border-bottom: 1px solid #fff;line-height: 55px;height:55px;padding-top: 10px;}
+    .TriRes_con_appoint ul{}
+    .TriRes_con_appoint ul li{float: left;width: 115px;margin: 20px 0 0 30px;}
+    .TriRes_con_appoint ul li span{display:block;font-size: 16px;color: #fff;line-height: 45px;height: 45px;}
+    .promptH6{display:none;color: red;line-height: 20px;height: 20px; }
+    .TriRes_con_appoint ul li strong{display: block;}
+    .TriRes_con_appoint ul li strong input{width: 100%;height: 25px;background: #fff;color:black;font-size: 12px;padding: 0 5px;}
+    .TriRes_con_appoint ul .first{width: 260px;}
+    .TriRes_con_appoint h2{color: #fff;text-align: center;line-height: 40px;height: 40px;clear: both;padding-top:40px;}
+    .TriRes_con_appoint h2 a{display: block;color: #fff;font-size: 16px;margin: 0 auto;width:200px;background: #f09b1a; border-radius: 9px;}
+
+*/
+
+
+
+    
+</style>
+
+</head>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/swipebox.css">
+<link href="css/style1.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet"  href="css/add.css">
+
+
+<link href="css/paper-bootstrap-wizard.css" rel="stylesheet" />
+
+<script src="js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+<script src="js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/addres.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#address").selectAddress()
+        $("#town").focusout(function(){
+            var province = $("#province option:selected").html()
+            var city = $("#city option:selected").html()
+            var town = $("#town option:selected").html()
+            if(province!= '选择省份' && city!="选择城市" && town!='选择区域'){
+                console.log('省份/直辖市：'+province+'\n城市:'+city+'\n区/县：'+town)
+            }
+        })
+    })
+    
+</script>
+
+ <script src="js/magicL.js"></script> <!-- load our javascript file -->
+
+
+
+
+<body style="background-color: #f2f2f2; padding: 0px 0px;" onload="document.forms[0].reset()">
+    <!-- header 
+     <a href="#Apply"><div id="btn" class="index_cyE">应<br/>聘<br/>职<br/>位</div>   </a>  -->      
+
+    <div class="header">
+        <div class="container">
+            <div class="header-nav">
+                <nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">南方微学</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+ 						<div style=" float: left;"><a class="navbar-brand" href="index.html"><i class="glyphicon glyphicon-education" aria-hidden="false" style=" background-image:url(images/logo2.png); background-repeat:no-repeat; width: 58px; height: 59px; background-size:100% 100%; margin-left:11px; "></i></a>
+ 						</div>
+ 						<div class="weixuenet">南方微学</div>
+
+                    </div>
+					
+					<div class="collapse navbar-collapse nav-wil collapse in" id="bs-example-navbar-collapse-1" >
+						<ul class="nav navbar-nav">
+							<li><a class="hvr-overline-from-center button2" href="index.html">首页</a></li>
+							<li><a class="hvr-overline-from-center button2" href="course.html">课程</a></li>
+							<li><a class="hvr-overline-from-center button2 active" href="join_us.html">加入我们</a></li>
+							<li><a class="hvr-overline-from-center button2" href="contact.html">联系我们</a></li>
+						</ul>
+					</div>
+				</nav>
+            </div>
+        </div>
+    </div>
+
+     <div class="feature" style=" padding-bottom: 47px; background-color: #ffffff; ">
+        <div class="container">
+            <h3 class="tittle">欢迎加入南方微学</h3> 
+            <div class="col-md-5 features-left">
+                <img src="image/swiper1.png" alt=""/>
+            </div>
+            <div class="col-md-7 features-right">
+                <!--<h4>南方微学网络有限公司给积极进取，努力提升，追求卓越的大学生群体提供了一个有深度、有宽度、有厚度的成长平台。</h4>-->
+                <p>你，处于黄金时代的你，渴望自己成为怎样的人？<br>
+                    来吧！到这里来！抓住机遇，进行人生历练，迅速提升自己！<br>
+                    这里就是由科技精英，跨界牛人，名企高管，北大校友打造的先进教育科技平台！在这里，你会获得前端的教育理念；会获取专业的能力、素养提升；能够得到先进的系统专业培训；能够与华为、腾讯等名企交流！<br>
+                    来吧！充满激情和进取的你！点击这个窗口，你将会成就一个意想不到的人生！
+                </p>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <!--优秀案例版块-->
+    <div class="services" style="border-top: 1px solid #b5b5b5; margin-bottom: 47px; background-color: #ffffff;">
+        <div class="container">
+            <div class="services-info">
+                <h3 class="tittle">优秀教师</h3>
+            </div>
+            <div class="services-grids" style="background-color: white;">
+                <div class="row1"  style="background-color: pink;">
+                    <div class="view1W">
+                        <div class="Wleft W">
+                            <div class="leftviews">
+                                <img src="image/people1.jpg">
+                                <p class="Ptitle pSame">见"微"知著</p>
+                                <p class="Pwriter pSame">徐曼玉</p>
+                                <p class="Ppost pSame">（英语教师）</p>
+                            </div>
+                            <div class="rightviews">
+                                <p>
+                                &nbsp;&nbsp;这份工作是我第一次大面积接触网络教学，在此之前，我参与的大多数是面对面课堂教学，所以网络教学对我个人而言，充满挑战和吸引力。<br>
+
+                                &nbsp;&nbsp;这些工作，让我有机会去接触更多地道的英语文章，和学生一起进步，一起坚持，一起学习。在工作中，我的个人风格得到了改善，变得更加细心，耐心。同时，还得感谢公司的理解和同事们的帮助，这是一个友爱的大家庭。<br>
+                                &nbsp;&nbsp;感谢这些年的经历，让我得到锻炼和成长。在接下来的时间里，我会继续努力踏实地拼搏，争取能为教育事业做出贡献，为孩子们带来更有趣实用的知识！<br>
+
+                                 </p>
+                            </div>
+                            
+                        </div>
+                        <div class="Wright W">
+                            <div class="leftviews">
+                                <img src="image/people1.png">
+                                <p class="Ptitle pSame">载梦之旅</p>
+                                <p class="Pwriter pSame">陈卓锋</p>
+                                <p class="Ppost pSame">（中文教师）</p>
+                            </div>
+                            <div class="rightviews">
+                                <p>&nbsp;&nbsp;历史专业，在引导和培养学生阅读习惯方面有丰厚的经验，在风趣幽默之中结合生活百态使学生对阅读领会深刻，经久不忘。<br>
+                                &nbsp;&nbsp;当上了阅读老师以后，在带领孩子进行阅读分享的同时，我也在提升自己的阅读素养。在这半年的时间内，我从《儒林外史》中感受清代末年士人的批判与无奈；在《雷雨》中感悟人性的扭曲与脆弱；在《生活十讲》中反思当下自身生活。如果没有这份工作，我想阅读于我而言只是可望而不可即的事儿罢了。“阅读领路人”，带领的不仅仅是学生，还有自己缺乏思考与阅读的灵魂。
+</p>
+                                 
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="view1W">
+                        <div class="Wleft W">
+                            <div class="leftviews">
+                                <img src="image/people4.jpg">
+                                <p class="Ptitle pSame">一叶知秋</p>
+                                <p class="Pwriter pSame">林小洁</p>
+                                <p class="Ppost pSame">（中文教师）</p>
+                            </div>
+                            <div class="rightviews">
+                                <p>&nbsp;&nbsp;汉语言文学专业，有着培养孩子阅读习惯的丰富经验，认真负责，亲和力强，深得学生喜欢。<br>
+                                &nbsp;&nbsp;在课堂上，我接触到了“学生主体”这个理念，是啊，老师懂得要多，但如何让孩子也懂得多呢？就好比小时候我们对大自然充满好奇，逮到只虫子就问父母，得到答案的时候，自己也将这只虫子烙在了自己的脑海中——学习也是一样的，主动地发现，老师及时引导，孩子们就更有效地进行学习。<br>
+                                &nbsp;&nbsp;我终于发现，我在带领学生的同时，也在带领自己。
+</p>
+                            </div>
+                            
+                        </div>
+                        <div class="Wright W">
+                            <div class="leftviews">
+                                <img src="image/people3.jpg">
+                                <p class="Ptitle pSame">科技“视”界</p>
+                                <p class="Pwriter pSame">吴家铭</p>
+                                <p class="Ppost pSame">（科技教师）</p>
+                            </div>
+                            <div class="rightviews">
+                                <p>&nbsp;&nbsp;在科技教育课程中，我与孩子们一起见证了编程世界中的游戏、戏剧、动画是如何一步步在自己的手中诞生，见证了电影世界中我们如何一步步地完成话剧制作，见证了电子积木的一个个元器件被我们灵巧的双手搭建出功能各异的电路。孩子们在慢慢地长大，我也与孩子们一起获得了成长。<br>
+                                &nbsp;&nbsp;在这个平台上，我坚定了自己的梦想，有了坚定的目标。感谢这些年的经历，也希望未来更迈着更坚定的步伐往前走。
+</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="container" style="border-top: 1px solid #b5b5b5; background-color: #e6e6e6; width: 100%;">
+         <h3 class="tittle" style="margin-bottom: 10px;">高薪诚聘英才</h3>
+         <p style="font-family: '幼圆';font-size: 25px;color: #f09b1a;line-height: 25px;text-align: center; margin-bottom: 30px;">让我们一起投身教育事业，让教育改变整个世界！</p>
+        <div style="width: 100%; height: auto;">
+            <div class="bottom-grids">
+                <div class="positions leftView">
+                    <p class="contanierTitle">岗位：中文阅读老师（兼职）&nbsp;&nbsp; 招聘人数：若干</p>
+                    <pre class="contanierPre">职位要求：
+  1.中文、教育、历史、哲学相关专业，学历本科及以上（包括在校大学生）
+  2.形象端正；有活力，思维灵活；自身喜欢阅读；努力上进，具有责任心和耐心 
+  3.意愿通过课外时间提升充实自己
+  岗位职责：
+  组织协助4-6人小组进行阅读活动 （目前学生为幼儿、小学、初中）
+  时薪：高于市场价，具体面议 
+  兼职地点普遍位于南山、福田区  
+  有意愿的同学请将简历发送此邮箱123974529@qq.com
+                    </pre>
+                </div>
+                <div class="positionsR leftView">
+                    <p class="contanierTitle">岗位：文科老师（全职/实习）&nbsp;&nbsp; 招聘人数：1-2人</p>
+                    <pre class="contanierPre">职位要求：
+  1.中文、教育、历史、哲学相关专业毕业，学历本科以上
+  2.形象端正；喜欢教育事业；努力上进，具有责任心和耐心
+  3.有活力、思维灵活，拥有团队合作精神 
+  岗位职责：
+  1.进行小班制中文教学
+  2.负责课程管理和办公室教学事务安排
+  3.参与课程设计，并提供建议
+  福利待遇：
+  周末休息两天
+  公司缴纳社保；下午茶时间；每月一次团建活动
+  工作地点：
+  深圳南山科技园区  
+  意愿者请将简历发送此邮箱123974529@qq.com
+                    </pre>
+                </div>
+            </div>
+            <div class="bottom-grids">
+                <div class="positions leftView">
+                    <p class="contanierTitle">岗位：英文老师（兼职）&nbsp;&nbsp; 招聘人数：若干</p>
+                    <pre class="contanierPre">职位要求：
+  1.英语专业，英语基础扎实，能够开展小班制英语课堂教学活动（英语师范专业优先）
+  2.努力上进，具有责任心和耐心，有教学经验优先  
+  3.意愿通过课外时间提升充实自己
+  岗位职责：
+  1.组织协助4-6人小组进行教学活动 （目前学生为幼儿、小学）
+  2.负责教学小组的教学反馈及教学效果跟踪
+  时薪：
+  高于市场价，具体面议 
+  兼职地点：
+  普遍位于南山、福田区  
+  有意愿的同学请将简历发送此邮箱254290047@qq.com 
+
+                    </pre>
+                </div>
+                <div class="positionsR leftView">
+                    <p class="contanierTitle">岗位：英文老师（全职/实习）&nbsp;&nbsp; 招聘人数：1-2人</p>
+                    <pre  class="contanierPre">职位要求：
+1.英语专业，英语基础扎实，学历本科以上
+2.形象端正；喜欢教育事业；努力上进，具有责任心和耐心
+3.有活力、思维灵活，拥有团队合作精神 
+岗位职责：
+1.进行小班制英文教学
+2.负责课程管理和办公室教学事务安排
+3.参与课程设计，并提供建议
+福利待遇：
+周末休息两天
+公司缴纳社保；下午茶时间；每月一次团建活动
+工作地点：
+深圳南山科技园区  
+意愿者请将简历发送此邮箱254290047@qq.com
+
+                    </pre>
+                </div>
+            </div>
+            <div class="bottom-grids">
+                <div class="positions leftView">
+                    <p class="contanierTitle">岗位：科技编程老师（兼职）&nbsp;&nbsp; 招聘人数：若干</p>
+                    <pre class="contanierPre">职位要求：
+ 1.理工科相关专业，学历本科及以上（包括在校大学生）
+ 2.形象端正；有活力，思维灵活；自身喜欢阅读；努力上进，具有责任心和耐心  
+ 3.意愿通过课外时间提升充实自己
+ 岗位职责：
+ 组织协助4-6人小组进行编程教学 （目前学生为小学、初中）
+ 时薪：
+ 高于市场价，具体面议 
+ 兼职地点：
+ 普遍位于南山、福田区  
+ 有意愿的同学请将简历发送此邮箱123974529@qq.com
+
+                    </pre>
+                </div>
+                <div class="positionsR leftView">
+                    <p class="contanierTitle">岗位：科技编程老师（全职/实习）&nbsp; 招聘人数：1-2人</p>
+                    <pre class="contanierPre">职位要求：
+ 1.理工科相关专业毕业，学历本科及以上
+ 2.形象端正；喜欢教育事业；努力上进，具有责任心和耐心
+ 3.有活力、思维灵活，拥有团队合作精神 
+ 岗位职责：
+ 1.进行小班制编程教学
+ 2.负责课程管理和办公室教学事务安排
+ 3.参与课程设计，并提供建议
+ 福利待遇：
+ 周末休息两天
+ 公司缴纳社保；下午茶时间；每月一次团建活动
+ 工作地点：
+ 深圳南山科技园区  
+ 意愿者请将简历发送此邮箱123974529@qq.com
+
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bottom-grids">
+                <div class="positions leftView">
+                    <p class="contanierTitle">岗位：科技课程讲师（兼职）&nbsp;&nbsp;&nbsp;&nbsp; 招聘人数：1-2人</p>
+                    <pre class="contanierPre">职位要求：
+ 1.热爱教育行业，有一定手工能力和教学经验；
+ 2.逻辑思维清晰，言语表达流畅，性格开朗；
+ 3.能够长期兼职者优先，师范类及理工类专业优先，有科技课程授课经验优先。
+ 岗位职责：
+ 1.在深圳各中小学进行课程教学，含校本课及社团课；
+ 2.在深圳各机构、社区进行课程教学，小班制教学；
+ 3.在深圳各家庭进行创客、编程类课程教学；
+ 时薪：高于市场价，具体面议 
+ 兼职地点：
+ 普遍位于南山、福田区  
+ 有意愿的同学请将简历发送邮箱：360194740@qq.com
+ 或加微信：13332987602（备注：兼职科技老师）
+                    </pre>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+ <!--<a  name="Apply">-->
+    <div class="image-container set-full-height" style="border-top: 3px solid #b5b5b5; background-color: #e6e6e6; width: 100%;">
+           
+            <div class="row">
+                
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="green" id="wizard">
+                            <form action="/recruit/submitapplication" method="POST" id="subForm">
+                                <div class="wizard-header" >
+                                    <h3 class="wizard-title">欢迎加入南方微学</h3>
+                                    <!--    <p class="category">_结伴成长 深度学习 探索未知_</p>-->
+                                </div>
+                                <div class="wizard-navigation">
+                                    <ul>
+                                        <li>
+                                            <a href="#location" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-map"></i>
+                                                </div>
+                                                信息填写
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="location">
+                                        <div class="row">
+                                            <div class="col-sm-5 col-sm-offset-1" style="margin-top: 20px;">
+                                                <div class="form-group">
+                                                    <label>姓名</label><span style="color:red;line-height: 1.42857143; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span>
+                                                    <input type="text" name="name" class="form-control" name="name" value="" placeholder="请填写真实姓名" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5" style="margin-top: 20px;">
+                                                <div class="form-group">
+                                                    <label>性别</label>
+                                                    <br>
+                                                    <select name="gender" class="form-control">
+                                                        <option disabled="" selected="">性别</option>
+                                                        <option value="男"> 男 </option>
+                                                        <option value="女"> 女 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>出生日期</label>
+                                                    <div style="width: 100%; ">
+                                                        <select name="birthYear" class="form-controls" style="float: left;width:50%;border-radius:5px;background-color:#eee;height:40px;"
+                                                            id="year">
+                                                            <option disabled="" selected="">年份</option>
+                                                            <option value="2002年">2002年</option>
+                                                            <option value="2001年">2001年</option>
+                                                            <option value="2000年">2000年</option>
+                                                            <option value="1999年">1999年</option>
+                                                            <option value="1998年">1998年</option>
+                                                            <option value="1997年">1997年</option>
+                                                            <option value="1996年">1996年</option>
+                                                            <option value="1995年">1995年</option>
+                                                            <option value="1994年">1994年</option>
+                                                            <option value="1993年">1993年</option>
+                                                            <option value="1992年">1992年</option>
+                                                            <option value="1991年">1991年</option>
+                                                            <option value="1990年">1990年</option>
+                                                            <option value="1989年">1989年</option>
+                                                            <option value="1988年">1988年</option>
+                                                            <option value="1987年">1987年</option>
+                                                            <option value="1986年">1986年</option>
+                                                            <option value="1985年">1985年</option>
+                                                            <option value="1984年">1984年</option>
+                                                            <option value="1983年">1983年</option>
+                                                            <option value="1982年">1982年</option>
+                                                            <option value="1981年">1981年</option>
+                                                            <option value="1980年">1980年</option>
+                                                            <option value="1979年">1979年</option>
+                                                            <option value="1978年">1978年</option>
+                                                            <option value="1977年">1977年</option>
+                                                            <option value="1976年">1976年</option>
+                                                            <option value="1975年">1975年</option>
+                                                            <option value="1974年">1974年</option>
+                                                            <option value="1973年">1973年</option>
+                                                            <option value="1972年">1972年</option>
+                                                            <option value="1971年">1971年</option>
+                                                            <option value="1970年">1970年</option>
+                                                            <option value="1969年">1969年</option>
+                                                            <option value="1968年">1968年 </option>
+                                                            <option value="1967年">1967年</option>
+                                                            <option value="1966年">1966年</option>
+                                                            <option value="1965年">1965年</option>
+                                                        </select>
+
+                                                        <select name="birthMonth" class="form-controls" style=" float: left;width:50%;border-radius:5px;background-color: #eee;height: 40px;"
+                                                            id="month">
+                                                            <option disabled="" selected="">日期</option>
+                                                            <option value="1月">1月</option>
+                                                            <option value="2月">2月</option>
+                                                            <option value="3月">3月</option>
+                                                            <option value="4月">4月</option>
+                                                            <option value="5月">5月</option>
+                                                            <option value="6月">6月 </option>
+                                                            <option value="7月">7月</option>
+                                                            <option value="8月">8月</option>
+                                                            <option value="9月">9月</option>
+                                                            <option value="10月">10月</option>
+                                                            <option value="11月">11月</option>
+                                                            <option value="12月">12月</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>学校</label>
+                                                    <br>
+                                                    <input name="university" type="text" class="form-control" placeholder="请输入就读学校" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>年级院系</label>
+                                                    <input name="grade" type="text" class="form-control" placeholder="请输入年级院系" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>专业名称</label>
+                                                    <br>
+                                                    <input name="major" type="text" class="form-control" placeholder="请输入专业名称">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>工作经验</label>
+                                                    <br>
+                                                    <select name="term" class="form-control">
+                                                        <option disabled="" selected="">年限</option>
+                                                        <option value="在读"> 在读 </option>
+                                                        <option value="应届毕业生"> 应届毕业生 </option>
+                                                        <option value="1年"> 1年 </option>
+                                                        <option value="2年"> 2年 </option>
+                                                        <option value="3年"> 3年 </option>
+                                                        <option value="4年"> 4年 </option>
+                                                        <option value="5年"> 5年 </option>
+                                                        <option value="6年"> 6年 </option>
+                                                        <option value="7年"> 7年 </option>
+                                                        <option value="8年"> 8年 </option>
+                                                        <option value="8年以上"> 8年以上 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>应聘职位</label>
+                                                    <input name="job" type="text" class="form-control" placeholder="请输入应聘职位">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>联系方式</label><span style="color:red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span>
+                                                    <br>
+                                                    <input name="tel" required="required" type="text" class="form-control" placeholder="请输入联系电话">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>电子邮箱</label>
+                                                    <input name="email" type="text" class="form-control" placeholder="请输入电子邮箱">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>现居住地</label>
+                                                    <div id="address">
+                                                        <select class="select" id="province" name="province">
+                                                            <option value="">省份</option>
+                                                        </select>
+
+                                                        <select name="city" id="city">
+                                                            <option value="">城市</option>
+                                                        </select>
+
+                                                        <select name="town" id="town">
+                                                            <option value="">区域</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>推荐人联系方式（选填）</label>
+                                                    <input name="referrer_tel" type="text" class="form-control" placeholder="请输入推荐人联系方式">
+                                                </div>
+                                            </div>
+                                          <!--  <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>请设置密码</label><span style="color:red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span>
+                                                    <br>
+                                                    <input id="FirstPassword" size="20" type="password" name="passwd" class="form-control" required="true" placeholder="请输入密码" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>确认密码</label><span style="color:red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">*</span><span id="tishi"></span>
+                                                    <input id="SecondPassword" size="20" type="password" name="passwd" class="form-control" required="true" placeholder="请确认密码" onkeyup="KeyUp()">
+                                                </div>
+                                            </div>-->
+                                            <div class="col-sm-5s col-sm-offset-1">
+                                                <div class="form-group" style=" margin-left: 15px;">
+                                                    <label style="width: 90%;">自我介绍</label>
+                                                    <textarea name="introduce" type="text" class="form-control" placeholder="请输入自我介绍，特长以及未来从事职业方向" style="height: 150px; width: 90%;"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5s col-sm-offset-1">
+                                                <div class="form-group" style=" margin-left: 15px;">
+                                                    <label>工作经验</label>
+                                                    <textarea name="experience" type="text" class="form-control" placeholder="请输入工作描述" style="height: 200px;width: 90%;"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wizard-footer">
+                                            <div style="margin: auto;">
+                                                <input id="submits1" type="submit" style="margin: auto; display: block;" class="btn-wd btn-success btn-success btn btn-finish btn-fill"
+                                                    value="提交" />
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+             
+            </div>
+        </div>
+
+    <script type="text/javascript">
+        /*打开预约框*/
+        function btn_appoint(){
+            var appoint=document.getElementById("appoint1");
+            appoint.style.display = "block";
+
+        } 
+        /*关闭预约框*/
+        function deleteBtn_appont()   
+        {   
+            var appoint1 = document.getElementById("appoint1");  
+            appoint1.style.display = "none";
+        }
+        //点击提交（预约）
+        $(document).on("click", "#preset", function () {
+			var name = document.getElementById("name").value;
+			var tel = document.getElementById("tel").value;
+			var appoint1 = document.getElementById("appoint1");  
+			var shouModol = document.getElementById("appointSuccessId");
+			var prompt = document.getElementById("promptH6");
+            console.log("提交成功665",$('#name').val(),$('#tel').val());
+            if (name !== "" && tel !== "") {
+                appoint1.style.display = "none";
+                appointSuccessId.style.display = "block";
+                //刷新页面
+                //myrefresh();
+                $.ajax({
+                    type: 'post',
+                    url: '/recruit/submitcourseapp',
+                    data: JSON.stringify({
+                        "name": $('#name').val(),
+                        "gender": "",
+                        "birthdate": "",
+                        "grade": "",
+                        "tel": $('#tel').val(),
+                        "school": "",
+                        "address": "",
+                        "updatetime": ""
+                    }),
+                    contentType: "application/json",
+                    //dataType: 'json',
+                    dataType: 'text',
+                    timeout: 5000,
+                    success: function (data) {
+                        console.log("提交成功66");
+                        //弹出成功提交
+                        appoint1.style.display = "none";
+                        appointSuccessId.style.display = "block";
+                        myrefresh();
+                    },
+                    error: function (data) {
+                        console.log("提交失败667", data.status);
+                    }
+                })
+            } else {
+                prompt.style.display = "block";
+
+            }
+        })
+        //刷新
+		function myrefresh()
+		{
+			window.location.reload();
+        } 
+        
+        
+    </script>
+
+    <!--预约试听课-->
+    <div class="index_cy_appont" onclick="btn_appoint()"></div>
+
+    <div class="TriRes_appoint" id="appoint1">
+        <div class="TriRes_con_appoint">
+            <div class="delete_goods" onclick="deleteBtn_appont()"></div>
+            <h1>预约试听课</h1>
+            <form method="post" action="" id="pro_yuyue_form">
+                <ul>
+                    <li class="first">
+                        <span>姓名</span>
+                        <strong><input type="text" id="name" name="YuYueUser.name" placeholder="姓名"></strong>
+                    </li>
+                    <li class="first">
+                        <h6 class="promptH6" id="promptH6">姓名或者电话不能为空</h6>
+                    </li>
+                    <li class="first">
+                        <span>联系电话</span>
+                        <strong><input type="text" id="tel" name="YuYueUser.tel" placeholder="联系电话"></strong>
+                    </li>
+                    </ul>
+                    
+                    <!--<h4 class="prompt">姓名或者电话不能为空</h4>-->
+                    <h2 id="preset"><a>立即预约</a> </h2>
+            </form>
+        </div>
+
+    </div>
+
+    <!--预约成功弹出框-->
+    <div class="appointSuccess" id="appointSuccessId">
+        <p>恭喜你，预约成功！</p>
+    </div>
+
+       <footer class="xue-footer xue-mall-footer am-text-center" style="text-align: center; background-color: white; padding-top: 50px; padding-bottom: 20px;border-top: 3px solid #b5b5b5; color: black;">
+            <p>
+                <a href="index.html" style="color: black;">首页</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="course.html" style="color: black;">课程</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="join_us.html" style="color: black;">加入我们</a>
+                <span class="am-footer-divider" style="color: black;">|</span>
+                <a href="contact.html" style="color: black;">联系我们</a>
+            </p>
+            <div class="am-footer-miscs ">
+                <p>
+                    客服电话： <strong class="am-text-danger">13332987602</strong>
+                     Copyright &copy; 2014-2018&nbsp; www.yzschool.com.cn 深圳市南方微学网络有限公司 版权所有
+                </p>
+                <p>
+                    地址：深圳市南山区数字科技园A3栋5楼
+                    <a target="_blank" href=""  style="color: black;">粤ICP备17055434号-1</a>
+                    <a target="_blank" href="" style="color: black;">
+                        <img src="http://res11.xesimg.com/public/img/jgwab.png" class="xue-footer-record-icon" >
+                        粤ICP备17055434号-1
+                    </a>
+                </p>
+            </div>
+</footer>
+
+
+
+    </div>
+<!--</a>-->
+<!--
+<script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=0af62220ee204909aae4b8b3ea934987" class="zhiCustomBtn" id="zhichiScript" data-args="属性名1=属性值1&属性名2=属性值2"></script>-->
+</body>
+
+</html>
